@@ -1,6 +1,7 @@
 * {
     font-size: 26px;
     box-sizing: border-box;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -34,8 +35,6 @@ body {
 .todolist div {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-items: center;
     background-color: white;
     transition: all 1s ease;
     width: 50%;
@@ -91,12 +90,13 @@ select option{
     font-size: 10px;
 }
 .fineshed{
-    margin-top: 40vh;
+    display: none;
 }
 
 .fineshed li{
     background-color: white;
     width: 30%;
     justify-content: center;
-    margin: 10px;
+    margin-left: 28%;
+    margin-bottom: 10px;
 }
