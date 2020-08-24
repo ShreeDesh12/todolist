@@ -2,9 +2,12 @@ const task = document.querySelector(".todo-input");
 const addBtn = document.querySelector(".fa-plus-circle");
 const todolist = document.querySelector(".todolist");
 const fineshed = document.querySelector(".fineshed");
+const filter = document.querySelector("#todo-filter");
+
+
 
 todolist.addEventListener("click", checkdel);
-
+filter.addEventListener("click",selectOption);
 
 
 
@@ -23,6 +26,7 @@ addBtn.addEventListener("click", function () {
         newdiv.appendChild(checkBtn);
         newdiv.appendChild(delBtn);
         todolist.appendChild(newdiv);
+        task.value = "";
     }
 
 });
@@ -48,5 +52,30 @@ function checkdel(e) {
             listItem.remove();
         });
 
+    }
+}
+
+function selectOption(event){
+    const item = event.target;
+    if(item.value == "all"){
+        todolist.style.display = "flex";
+        todolist.style.flexDirection = "column";
+        fineshed.style.display = "none";
+    }
+    else if(item.value == "complete"){
+        fineshed.style.display = "flex";
+        fineshed.style.flexDirection = "column";
+        fineshed.style.justifyContent = "center";
+        todolist.style.display = "none";
+    }
+    else{
+        if(!todolist.classList.contains("completed")){
+            todolist.style.display = "flex";
+            todolist.style.flexDirection = "column";
+        }
+        else{
+            todolist.style.display = "none";
+        }
+        fineshed.style.display = "none";
     }
 }
