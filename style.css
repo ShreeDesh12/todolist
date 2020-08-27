@@ -89,8 +89,9 @@ select option{
     font-size: 10px;
 }
 .fineshed{
-    display: none;
     margin-left: 10px;
+    text-decoration: line-through;
+    opacity : 0.8;
 }
 
 .fineshed li{
@@ -117,6 +118,7 @@ select option{
     }
     .fineshed{
         margin-left: -30%;
+
     }
 
 }
