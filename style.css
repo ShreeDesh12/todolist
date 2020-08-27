@@ -35,7 +35,6 @@ body {
 .todolist div {
     display: flex;
     flex-direction: row;
-    background-color: white;
     transition: all 1s ease;
     width: 50%;
     margin: 10px;
@@ -43,7 +42,7 @@ body {
 
 li {
     flex: 1;
-    list-style: none;
+    color: white;
 
 }
 
@@ -91,12 +90,33 @@ select option{
 }
 .fineshed{
     display: none;
+    margin-left: 10px;
 }
 
 .fineshed li{
-    background-color: white;
     width: 30%;
     justify-content: center;
     margin-left: 28%;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px){
+    *{
+        font-size: 30px;
+    }
+    .todoInput{
+        justify-content: left;
+        height: 10vh;
+    }
+    .todo-input{
+        width: 80%;
+    }
+    .todolist{
+        position: relative;
+        margin-left: -30%;
+    }
+    .fineshed{
+        margin-left: -30%;
+    }
+
 }

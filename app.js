@@ -56,11 +56,16 @@ function checkdel(e) {
 }
 
 function selectOption(event){
+    console.log(event);
     const item = event.target;
     if(item.value == "all"){
         todolist.style.display = "flex";
         todolist.style.flexDirection = "column";
-        fineshed.style.display = "none";
+        fineshed.style.display = "flex";
+        fineshed.style.flexDirection = "column";
+        fineshed.style.textDecoration = "line-through";
+        fineshed.style.opacity = "0.8";
+
     }
     else if(item.value == "complete"){
         fineshed.style.display = "flex";
